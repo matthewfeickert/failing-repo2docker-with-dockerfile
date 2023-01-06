@@ -10,7 +10,8 @@ The rest of it follows the [Preparing your Dockerfile](https://mybinder.readthed
 The Dockerfile builds successfully when repo2docker is run locally on the repository
 
 ```console
-$ pipx install jupyter-repo2docker  # if you don't use pipx just pip install in your local virtual environment
+# if you don't use pipx just pip install in your local virtual environment
+$ pipx install jupyter-repo2docker
 $ repo2docker --version
 2022.10.0
 $ repo2docker .
@@ -24,7 +25,7 @@ If the user tries to log in with the token in the URL they are not able to.
 
 From the tutorial it seems that `repo2docker` is running the equivalent of
 
-```console
+```
 docker run -it --rm -p 8888:8888 my-image jupyter notebook --NotebookApp.default_url=/lab/ --ip=0.0.0.0 --port=8888
 ```
 
