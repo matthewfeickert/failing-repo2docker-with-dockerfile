@@ -65,9 +65,9 @@ docker run -it --rm -p 8888:8888 matthewfeickert/failing-repo2docker-with-docker
 
 ![jupyter-lab-launcher](jupyter-lab-launcher.png)
 
-I understand [from the tutorial](https://github.com/jupyterhub/mybinder.org-user-guide/blob/262366b9d653ea9c73031a27ec9a928a3c615aa8/doc/tutorials/dockerfile.md?plain=1#L90-L93) that the `--NotebookApp.default_url=/lab/` is required for Binder as
+I understand [from the tutorial](https://github.com/jupyterhub/mybinder.org-user-guide/blob/262366b9d653ea9c73031a27ec9a928a3c615aa8/doc/tutorials/dockerfile.md?plain=1#L90-L93) that the `--NotebookApp.default_url=/lab/` is required for Binder to act as a safeguard as
 
 > If you install [the classic notebook interface](https://jupyter-notebook.readthedocs.io/en/stable/) but not [JupyterLab](https://jupyterlab.readthedocs.io/), you must manually change your mybinder.org URLs from `/lab` to `/tree` as described [in the user interface documentation](<https://mybinder.readthedocs.io/en/latest/howto/user_interface.html#jupyterlab>).
 > Otherwise, you might get a `404: Not Found` error when launching your project on binder.
 
-but it seems there is some interaction problem here.
+but it seems there is some interaction problem here for `repo2docker`.
