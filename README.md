@@ -19,7 +19,7 @@ $ repo2docker .
 
 However, when launching the environment from the URL with the token presented the user is brought to a login screen shown below that notes "Token authentication is enabled".
 
-![repo2docker-password-notebook-launch](repo2docker-password-notebook-launch.png)
+![repo2docker-password-notebook-launch](https://raw.githubusercontent.com/matthewfeickert/failing-repo2docker-with-dockerfile/main/repo2docker-password-notebook-launch.png)
 
 If the user tries to log in with the token in the URL they are not able to.
 
@@ -55,7 +55,7 @@ It seems the problems stems from `--NotebookApp.default_url=/lab/` as if we run 
 docker run -it --rm -p 8888:8888 matthewfeickert/failing-repo2docker-with-dockerfile:latest jupyter notebook --ip=0.0.0.0 --port=8888
 ```
 
-![classic-jupyter-tree](classic-jupyter-tree.png)
+![classic-jupyter-tree](https://raw.githubusercontent.com/matthewfeickert/failing-repo2docker-with-dockerfile/main/classic-jupyter-tree.png)
 
 and if we run with `jupyter lab` things work fine
 
@@ -63,7 +63,7 @@ and if we run with `jupyter lab` things work fine
 docker run -it --rm -p 8888:8888 matthewfeickert/failing-repo2docker-with-dockerfile:latest jupyter lab --ip=0.0.0.0 --port=8888
 ```
 
-![jupyter-lab-launcher](jupyter-lab-launcher.png)
+![jupyter-lab-launcher](https://raw.githubusercontent.com/matthewfeickert/failing-repo2docker-with-dockerfile/main/jupyter-lab-launcher.png)
 
 I understand [from the tutorial](https://github.com/jupyterhub/mybinder.org-user-guide/blob/262366b9d653ea9c73031a27ec9a928a3c615aa8/doc/tutorials/dockerfile.md?plain=1#L90-L93) that the `--NotebookApp.default_url=/lab/` is required for Binder to act as a safeguard as
 
