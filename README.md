@@ -2,6 +2,11 @@
 
 Example repository to demonstrate repo2docker failure for minimal example Dockerfile
 
+## Crossposted Issues
+
+* [`binder-examples/minimal-dockerfile` Issue #8](https://github.com/binder-examples/minimal-dockerfile/issues/8#issuecomment-1374100001): forked but unchanged repo does not launch on mybinder.org
+* [`jupyterhub/repo2docker` Issue #1231](https://github.com/jupyterhub/repo2docker/issues/1231): repo2docker fails to launch into jupyter lab properly from valid minimal Dockerfile
+
 ## Minimal Failing Example
 
 The Dockerfile in this repository under `binder/` is a modified version of the example given in the [`binder-examples/minimal-dockerfile` project](https://github.com/binder-examples/minimal-dockerfile/tree/2cd2202f6e6fa8c47c644a38262eb0c093f82d15).
