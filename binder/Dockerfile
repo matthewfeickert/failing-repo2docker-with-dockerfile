@@ -37,6 +37,6 @@ WORKDIR ${HOME}
 # Install necessary jupyter dependencies
 # Install jupyterhub to allow use of the repository with an authenticated Binder
 RUN python -m pip --no-cache-dir install --upgrade pip setuptools wheel && \
-    python -m pip --no-cache-dir install jupyter jupyterlab jupyterhub && \
+    python -m pip --no-cache-dir install jupyter jupyterlab jupyterhub 'tornado<6.2' && \
     command -v python && \
     python -m pip list
