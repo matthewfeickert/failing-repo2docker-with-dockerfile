@@ -1,3 +1,4 @@
 notebook
 jupyterlab
 jupyterhub
+jupyter-server<2.0.0
