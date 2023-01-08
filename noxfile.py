@@ -9,7 +9,7 @@ nox.options.sessions = ["lock"]
 DIR = Path(__file__).parent.resolve()
 
 
-@nox.session()
+@nox.session(reuse_venv=True)
 def lock(session):
     """
     Build a lockfile for the image
@@ -38,7 +38,7 @@ def lock(session):
         "cp", "_tmp.lock", "requirements.lock", external=True
     )
     session.log("rm _tmp.lock")
-    root_controlled_file = DIR / "docker" / "_tmp.lock"
+    root_controlled_file = DIR / "_tmp.lock"
     if root_controlled_file.exists():
         root_controlled_file.unlink()
 
