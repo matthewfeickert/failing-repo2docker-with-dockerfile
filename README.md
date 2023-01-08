@@ -2,7 +2,7 @@
 
 Example repository to demonstrate repo2docker failure for minimal example Dockerfile
 
-**Note:** For reproducibility reasons the Dockerfile has been made non-minimal to allow for lock file creation with `pip-tools`.
+**Note:** For reproducibility reasons in [PR #5](https://github.com/matthewfeickert/failing-repo2docker-with-dockerfile/pull/5) the Dockerfile has been made non-minimal to allow for lock file creation with `pip-tools`.
 
 ## Crossposted Issues
 
