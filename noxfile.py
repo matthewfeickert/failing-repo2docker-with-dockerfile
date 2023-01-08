@@ -34,9 +34,7 @@ def lock(session):
         "compile_lock.sh",
         external=True,
     )
-    session.run(
-        "cp", "_tmp.lock", "requirements.lock", external=True
-    )
+    session.run("cp", "_tmp.lock", "requirements.lock", external=True)
     session.log("rm _tmp.lock")
     root_controlled_file = DIR / "_tmp.lock"
     if root_controlled_file.exists():
