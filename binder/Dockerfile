@@ -28,7 +28,18 @@ WORKDIR ${HOME}
 
 # Install necessary jupyter dependencies
 # Install jupyterhub to allow use of the repository with an authenticated Binder
+
+# Using lock file for reproducibility of issue
+# RUN python -m pip --no-cache-dir install --upgrade pip setuptools wheel && \
+#     python -m pip --no-cache-dir install jupyter jupyterlab jupyterhub && \
+#     command -v python && \
+#     python -m pip list
+COPY requirements.txt /docker/requirements.txt
+COPY requirements.lock /docker/requirements.lock
 RUN python -m pip --no-cache-dir install --upgrade pip setuptools wheel && \
-    python -m pip --no-cache-dir install jupyter jupyterlab jupyterhub && \
+    python -m pip --no-cache-dir install \
+        --no-deps \
+        --require-hashes \
+        --requirement /docker/requirements.lock && \
     command -v python && \
     python -m pip list
